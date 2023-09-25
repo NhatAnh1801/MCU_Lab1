@@ -1,0 +1,28 @@
+15:37:06 **** Incremental Build of configuration Debug for project Lab1_3 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:112:9: warning: implicit declaration of function 'LED_ON1'; did you mean 'LED_ON'? [-Wimplicit-function-declaration]
+  112 |         LED_ON1(5);
+      |         ^~~~~~~
+      |         LED_ON
+arm-none-eabi-gcc -o "Lab1_3.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\ADMIN\STM32CubeIDE\workspace_1.7.0\Lab1_3\STM32F103C6UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Lab1_3.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Lab1_3.elf
+ 
+arm-none-eabi-size   Lab1_3.elf 
+arm-none-eabi-objdump -h -S  Lab1_3.elf  > "Lab1_3.list"
+   text	   data	    bss	    dec	    hex	filename
+   5332	     88	   1568	   6988	   1b4c	Lab1_3.elf
+arm-none-eabi-objcopy  -O ihex  Lab1_3.elf  "Lab1_3.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary  Lab1_3.elf  "Lab1_3.bin"
+ 
+Finished building: Lab1_3.hex
+Finished building: Lab1_3.list
+Finished building: Lab1_3.bin
+ 
+ 
+ 
+
+15:37:06 Build Finished. 0 errors, 1 warnings. (took 767ms)
+
