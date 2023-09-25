@@ -139,8 +139,6 @@ int main(void)
   {
 	  setAllClock();
 	  HAL_Delay(1000);
-	  clearAllClock();
-	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
