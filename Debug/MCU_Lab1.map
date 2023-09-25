@@ -68,9 +68,9 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./Core/Src/main.o
  .data          0x0000000000000000        0x0 ./Core/Src/main.o
  .bss           0x0000000000000000        0x0 ./Core/Src/main.o
- .text.clearAllClock
+ .text.setAllClock
                 0x0000000000000000       0x40 ./Core/Src/main.o
- .text.setNumberOnClock
+ .text.clearNumberOnClock
                 0x0000000000000000       0x54 ./Core/Src/main.o
  .group         0x0000000000000000        0xc ./Core/Src/stm32f1xx_hal_msp.o
  .group         0x0000000000000000        0xc ./Core/Src/stm32f1xx_hal_msp.o
@@ -1897,12 +1897,12 @@ LOAD c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  *(.text)
  .text          0x000000000800010c       0x40 c:/st/stm32cubeide_1.7.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346/tools/bin/../lib/gcc/arm-none-eabi/9.3.1/thumb/v7-m/nofp/crtbegin.o
  *(.text*)
- .text.setAllClock
+ .text.clearAllClock
                 0x000000000800014c       0x40 ./Core/Src/main.o
-                0x000000000800014c                setAllClock
- .text.clearNumberOnClock
+                0x000000000800014c                clearAllClock
+ .text.setNumberOnClock
                 0x000000000800018c       0x54 ./Core/Src/main.o
-                0x000000000800018c                clearNumberOnClock
+                0x000000000800018c                setNumberOnClock
  .text.main     0x00000000080001e0       0x3c ./Core/Src/main.o
                 0x00000000080001e0                main
  .text.SystemClock_Config

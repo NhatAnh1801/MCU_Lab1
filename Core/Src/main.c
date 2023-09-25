@@ -137,8 +137,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  setAllClock();
-	  clearNumberOnClock(sec);
+	  clearAllClock();
+	  setNumberOnClock(sec);
 	  sec++;
 	  HAL_Delay(1000);
 
