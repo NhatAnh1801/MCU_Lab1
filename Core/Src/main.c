@@ -137,40 +137,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    /* USER CODE END WHILE */
-
-    /* USER CODE BEGIN 3 */
-
-
-		//Implementation of analog clock
-	  if(flag == 1){
-	      clearAllClock();
-	      flag = 0;
-	  }
-	  if(sec >= 60){
-	      sec = 0;
-	      min++;
-	      if(min >= 60){
-	          min = 0;
-	          hour++;
-	          if(hour >= 60){
-	              hour = 0;
-	              flag = 1;
-	              clearAllClock();
-	          }
-	      }
-	  }
-	  setNumberOnClock(sec);
-	  clearNumberOnClock((sec + 11) % 12);
-
-	  setNumberOnClock(min);
-	  clearNumberOnClock((min + 11) % 12);
-
-	  setNumberOnClock(hour);
-	  clearNumberOnClock((hour + 11) % 12);
-
+	  setAllClock();
+	  clearNumberOnClock(sec);
 	  sec++;
-	  HAL_Delay(200);
+	  HAL_Delay(1000);
 
   }
   /* USER CODE END 3 */
