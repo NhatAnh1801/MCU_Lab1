@@ -137,11 +137,10 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  clearAllClock();
-	  setNumberOnClock(sec);
-	  sec++;
+	  setAllClock();
 	  HAL_Delay(1000);
-
+	  clearAllClock();
+	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
