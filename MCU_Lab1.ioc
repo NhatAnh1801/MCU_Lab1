@@ -113,8 +113,13 @@ ProjectManager.MainLocation=Core/Src
 ProjectManager.NoMain=false
 ProjectManager.PreviousToolchain=STM32CubeIDE
 ProjectManager.ProjectBuild=false
+<<<<<<< Updated upstream
 ProjectManager.ProjectFileName=MCU_Lab1.ioc
 ProjectManager.ProjectName=MCU_Lab1
+=======
+ProjectManager.ProjectFileName=Lab1_3.ioc
+ProjectManager.ProjectName=Lab1_3
+>>>>>>> Stashed changes
 ProjectManager.RegisterCallBack=
 ProjectManager.StackSize=0x400
 ProjectManager.TargetToolchain=STM32CubeIDE
