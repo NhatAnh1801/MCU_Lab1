@@ -87,15 +87,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  int counter = 5;
-  enum TrafficLightState {
-    RED_GREEN1,
-  	RED_YELLOW1,
-  	GREEN_RED1,
-  	YELLOW_RED1,
-    };
-  //initialize
-  enum TrafficLightState current = RED_GREEN1;
+  int counter = 9;
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,50 +97,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  //state machine
-	  switch(current){
-	  	  case RED_GREEN1:
-	  		  	LED_ON(0);
-	  		  	LED_ON1(5);
-	  		  	display7SEG(counter);
-	  		  	counter --;
-	  		  	if(counter <= 0){
-	  		  		current = RED_YELLOW1;
-	  		  		counter = 2;
-
-	  		  	}
-	  			break;
-	  	  case RED_YELLOW1:
-	  		  	LED_ON(0);
-	  		  	LED_ON1(4);
-	  		  	display7SEG(counter);
-	  		  	counter --;
-	  		  	if(counter < 0){
-	  		  		current = GREEN_RED1;
-	  		  		counter = 3;
-	  		  	}
-	  		  	break;
-	  	  case GREEN_RED1:
-	  		  	LED_ON(2);
-	  		  	LED_ON1(3);
-	  		  	display7SEG(counter);
-	  		  	counter --;
-	  		  	if(counter < 0){
-	  		  		current = YELLOW_RED1;
-	  		  		counter = 2;
-	  		  	}
-	  		  	break;
-	  	  case YELLOW_RED1:
-	  		  	LED_ON(1);
-	  		  	LED_ON1(3);
-	  		  	display7SEG(counter);
-	  		  	counter --;
-	  		  	if(counter < 0){
-	  		  		current = RED_GREEN1;
-	  		  		counter = 5;
-	  		  	}
-	  		  	break;
-	  }
+	  display7SEG(counter--);
+	  if(counter < 0) counter = 9;
 	  HAL_Delay(1000);
   }
   /* USER CODE END 3 */
